@@ -1,0 +1,1 @@
+cdrecord dev=/dev/cdrom blank=fast

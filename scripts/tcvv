@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# truecrypt virtual volume
+#
+# 1 - mount/umount
+# 2 - device
+# 3 - mountpoint
+
+if [ "$1" = "mount" ]
+then
+	shift
+
+	if [ -z "$1" -o -z "$2" ]
+	then
+		echo error: specify both virtual volume file and mountpoint
+		exit
+	fi
+
+	#if [ "$3" = "outer" ]
+	#then
+	#	truecrypt --protect-hidden=yes --fs-options=defaults,noatime --mount /dev/$1 ~/$2
+	#elif [ "$3" = "inner" ]
+	#then
+	#	truecrypt --fs-options=defaults,noatime --mount /dev/$1 ~/$2
+	#else
+	#	echo error: invalid truecrypt partition type \"$3\"
+	#	exit
+	#fi
+
+	truecrypt --fs-options=users,uid=1000,gid=100,fmask=0113,dmask=0002  --mount "$1" "$2" &>/dev/null
+elif [ "$1" = "umount" ]
+then
+	shift
+
+	if [ -z "$1" ]
+	then
+		echo error: specify virtual volume file
+		exit
+	fi
+
+	truecrypt -d "$1"
+else
+	echo error: specify operation: mount or umount
+fi
+

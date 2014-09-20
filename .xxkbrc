@@ -1,0 +1,24 @@
+# config is taken from here:
+# http://unixforum.org/index.php?showtopic=12844
+
+XXkb.controls.two_state: yes
+
+XXkb*label.text.1: EN
+XXkb*label.text.2: RU
+
+XXkb.controls.focusout: no
+
+XXkb.mainwindow.appicon: yes
+XXkb.mainwindow.enable: yes
+XXkb.mainwindow.border.color: black
+XXkb.mainwindow.border.width: 2
+XXkb.mainwindow.geometry: 13x13+0+0
+XXkb.mainwindow.in_tray: true
+XXkb.mainwindow.label.enable: yes
+XXkb.mainwindow.label.background: yellow
+XXkb.mainwindow.label.foreground: blue4
+XXkb.mainwindow.label.font: -*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-iso10646-*
+XXkb.mainwindow.type: tray
+
+XXkb.button.enable: no
+

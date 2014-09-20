@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#mkisofs -r -J -l -o ./$1.iso $1
+mkisofs -r -l -o "$2"/$1.iso $1

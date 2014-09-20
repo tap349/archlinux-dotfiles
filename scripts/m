@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$2" = "vfat" ]
+then
+	sudo mount -t vfat /dev/$1 /media/$1 -o defaults,uid=1000,iocharset=utf8,codepage=866
+elif [ "$2" = "ntfs" ]
+then
+	sudo mount -t ntfs-3g /dev/$1 /media/$1 -o defaults,locale=ru_RU.utf8,force,errors=recover
+elif [ "$2" = "iso9660" ]
+then
+	sudo mount -t iso9660 /dev/$1 /media/$1
+else
+	echo please specify FS type and try again
+fi

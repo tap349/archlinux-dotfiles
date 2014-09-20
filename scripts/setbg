@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$1" = "max" ]
+then
+	OPTION="--bg-max"
+	shift
+elif [ "$1" = "center" ]
+then
+	OPTION="--bg-center"
+	shift
+else
+	OPTION="--bg-max"
+fi
+
+feh $OPTION "$PWD/$1"
+
+echo "new bg image set"

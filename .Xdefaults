@@ -1,0 +1,234 @@
+!---------------------------------------------------------------------------------
+!                                                                                !
+! urxvt                                                                          !
+!                                                                                !
+!---------------------------------------------------------------------------------
+
+!---------------------------------------------------------------------------------
+! transparency
+!---------------------------------------------------------------------------------
+!urxvt*transparent: 	false
+urxvt*transparent: 	true
+
+!---------------------------------------------------------------------------------
+! background image
+!---------------------------------------------------------------------------------
+!urxvt*inheritPixmap: 	true
+! add ":root" to make pixmap act as wallpaper
+!urxvt*backgroundPixmap: /home/ishitori/pictures/aha/temp/hq_bw.xpm;40x40+50+50:root
+
+!---------------------------------------------------------------------------------
+! transparency options and bg/fg colors
+!---------------------------------------------------------------------------------
+! <100 - darkens; >100 - lightens
+urxvt*shading:		40
+urxvt*tintColor:	ivory
+urxvt*saveLines:	32000
+!urxvt*blendType:	overlay
+!urxvt*blurRadius:	0
+!urxvt*foreground:	#002233
+urxvt*foreground:	#eeeeee
+!urxvt*background:	#c5d5df
+!urxvt*background:	#ffffff
+!urxvt*background:	#fffff9
+!urxvt*background:	#222225
+urxvt*background:	#1C252C
+urxvt*buffered:		true
+
+!---------------------------------------------------------------------------------
+! font
+!---------------------------------------------------------------------------------
+
+urxvt*font:             -*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-iso10646-*
+urxvt*boldFont:  		-*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-iso10646-*
+
+!urxvt*font:			xft:Anonymous Pro for Powerline:style=Regular:pixelsize=16:antialias=true:hinting=true
+!urxvt*boldFont:		xft:Anonymous Pro for Powerline:style=Bold,BoldForPowerline:pixelsize=16:antialias=true:hinting=true
+
+!URxvt.letterSpace: -3
+
+!---------------------------------------------------------------------------------
+! other options
+!---------------------------------------------------------------------------------
+urxvt*internalBorder:   0
+urxvt*scrollBar:	false
+!urxvt*metaSendsEscape:	true
+!urxvt*altSendsEscape:	true
+!urxvt*eightBitInput:	false
+
+!---------------------------------------------------------------------------------
+! colors
+!---------------------------------------------------------------------------------
+!URxvt*colorBD:          black
+! foreground colour
+!URxvt*color0:          #444444
+!URxvt*color1:          #007FFF
+URxvt*color1:          	steelblue
+! selection, main font color in vim, top line in htop
+!URxvt*color2:           #888888
+!URxvt*color2:           #228B22
+!!URxvt*color2:           #9B7765
+! memory fg color in htop
+URxvt*color3:           SteelBlue
+! bg color in mcedit and mc, comments in vi and config files
+! URxvt*color4:           #27408B
+URxvt*color4:           #104363
+!URxvt*color5:          black
+! selected line bg color and extra numbers in htop, alias names in .bashrc
+!URxvt*color6:           #ababab
+URxvt*color6:           lightskyblue
+!URxvt*color7:          black
+! root name in htop, file name fg color in mc when root
+!URxvt*color8:          black
+!URxvt*color9:          SkyBlue
+!URxvt*color10:         black
+!URxvt*color11:         black
+! selected line bg color
+!URxvt*color12:         royalblue
+!URxvt*color13:         black
+! links (soft as well)
+!!URxvt*color14:          darkblue
+! fg color of buttons in dialog boxed (e.g. save changes?)
+!URxvt*color15:         black
+
+!---------------------------------------------------------------------------------
+!                                                                                !
+! dzen2                                                                          !
+!                                                                                !
+!---------------------------------------------------------------------------------
+
+!dzen2.font:		-*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-*-r
+!dzen2.foreground:	#22EE11
+!dzen2.background:	black
+
+!---------------------------------------------------------------------------------
+!                                                                                !
+! emacs                                                                          !
+!                                                                                !
+!---------------------------------------------------------------------------------
+
+!!Emacs.font:  -*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-*-r
+!Emacs.font:  Liberation Mono-10
+!Emacs.font:    -xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-cp1251
+!!Emacs.boldFont:    -xos4-terminus-bold-r-*-*-14-*-*-*-*-*-*-cp1251
+!Emacs.font:    -misc-liberation mono-medium-r-normal-*-*-120-*-*-*-*-*-r
+!Emacs.font:   -lfp-eurotype-*-*-*-*-*-*-*-*-*-*-*-*
+!!Emacs.FontBackend: xft
+
+!---------------------------------------------------------------------------------
+!                                                                                !
+! xterm                                                                          !
+!                                                                                !
+!---------------------------------------------------------------------------------
+
+xterm*utf8:			1
+
+xterm*faceName:   	Ubuntu Mono for Powerline
+xterm*faceSize:   	11
+xterm*termName:   	xterm-256color
+xterm*font: 		fixed
+xterm*boldFont: 	fixed
+
+xterm*transparent: 	true
+xterm*shading:		150
+!xterm*saveLines:	12000
+xterm*color1:		SteelBlue
+xterm*color2:		#8B7765
+!! selected line in mc
+xterm*color3:		SteelBlue
+xterm*color4: 		#104363
+!!xterm*color5:		black
+!! bash cmds in vi?
+xterm*color6:		lightskyblue
+!!xterm*color7:		black
+!!xterm*color8:		black
+!!xterm*color9:		black
+!!xterm*color10:		black
+!!xterm*color11:		black
+!!xterm*color12:		steelblue
+!!xterm*color13:		black
+!! bg color of package numbers in yaourt, matching parentheses in vim
+xterm*color14:		darkblue
+
+!---------------------------------------------------------------------------------
+!                                                                                !
+! yeahconsole                                                                    !
+!                                                                                !
+!---------------------------------------------------------------------------------
+
+yeahconsole*transparent: 	true
+yeahconsole*buffered:		true
+yeahconsole*toggleKey: 		Alt+Escape
+!yeahconsole*toggleKey: 	None+F2
+yeahconsole*background: 	rgb:1D/1D/1D
+yeahconsole*foreground: 	rgb:E6/E6/E6
+yeahconsole*shading:		70
+!yeahconsole*loginShell:	True
+yeahconsole*consoleHeight: 	45
+yeahconsole*aniDelay:		5 
+yeahconsole*handleWidth:	0
+yeahconsole*term: 			xterm
+yeahconsole*scrollBar: 		false
+!yeahconsole*reverseVideo: 	false
+yeahconsole*tintColor: 		grey30
+!yeahconsole*inheritPixmap: 	true
+!yeahconsole*font: 		-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*
+!yeahconsole*boldFont: 		-*-terminus-bold-r-normal-*-12-*-*-*-*-*-*
+yeahconsole*font:		-*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-*-r
+yeahconsole*saveLines: 		12000
+yeahconsole*cursorBlink: 	false
+!yeahconsole*color4:		steelblue
+!yeahconsole*color12:		steelblue
+
+!-------------------------------------------------------------------------------
+!                                                                                !
+! stjerm                                                                       !
+!                                                                                !
+!-------------------------------------------------------------------------------
+
+!stjerm.key:			grave
+!!stjerm.key:			escape
+!!stjerm.mod:			alt
+!!stjerm.opacity:			100
+!!stjerm.foreground:		white
+!!stjerm.background:		black
+!!stjerm.font:			terminus 10
+!!stjerm.position:		top
+!!stjerm.autohide:		true
+!stjerm.width:			1920
+!stjerm.height:			500
+!stjerm.bgimage:		/home/ishitori/pictures/interfacelift.com/02468_snowmountain_1920x1080.jpg
+!!stjerm.allowbold:		false
+
+!stjerm.color0:			white
+!stjerm.color1:			white	
+!stjerm.color2:			white
+!stjerm.color3:			white
+!stjerm.color4:			steelblue
+!stjerm.color5:			steelblue
+! current dir in prompt
+!stjerm.color6:			steelblue
+! selected line, background in hot dir list
+!stjerm.color7:			grey30
+!stjerm.color8:			white
+!stjerm.color9:			white
+!stjerm.color10:		white
+!stjerm.color11:		white
+!stjerm.color12:		steelblue
+!stjerm.color13:		white
+!stjerm.color14:		blue
+! font color when selected
+!stjerm.color15:		black
+
+!-------------------------------------------------------------------------------
+!                                                                                !
+! font settings                                                                !
+!                                                                                !
+!-------------------------------------------------------------------------------
+
+!Xft.antialias: 1
+!Xft.autohint: 1
+!Xft.hinting: 1
+!Xft.hintstyle: hintfull
+!Xft.rgba: rgb
+

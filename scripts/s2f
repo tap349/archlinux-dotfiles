@@ -1,0 +1,35 @@
+#!/bin/bash                
+
+# split and convert to FLAC
+#
+# 1 - cue file
+# 2 - image file (APE, WAVE, FLAC)
+
+#CUEFILE=*.cue
+#IMAGEFILE=*.flac
+
+# convert cue sheet from cp1251 into utf-8
+iconv -f cp1251 -t utf8 "$1" -o "${1}.utf8" && mv "${1}.utf8" "$1"
+if [ $? -ne 0 ]; then exit; fi
+echo
+echo ------------------------------------------------------------------------------------------
+echo   cue sheet \"$1\" is converted from cp1251 to utf8
+echo ------------------------------------------------------------------------------------------
+echo
+
+# split image into tracks
+shnsplit -o flac -f "$1" -t "%n - %t" "$2"
+#cuebreakpoints "$1" | sed s/$/0/ | shnsplit -o flac -t "%n - %t" "$2"
+if [ $? -ne 0 ]; then exit; fi
+echo 
+echo ------------------------------------------------------------------------------------------
+echo   image file \"$2\" is split into tracks        
+echo ------------------------------------------------------------------------------------------
+
+# remove image and add tag info from cue sheet to tracks
+rm "$2" *pregap* && cuetag.sh "$1" *.flac
+echo 
+echo ------------------------------------------------------------------------------------------
+echo   cue sheet information is added to tracks  
+echo ------------------------------------------------------------------------------------------
+

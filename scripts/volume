@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" = "up" ]
+then
+    #amixer sset Master 10+ unmute | grep '\[[0-9]\{1,2\}%\]' > /dev/null
+    ossmix vmix0-outvol -- +2
+elif [ "$1" = "down" ]
+then
+    #amixer sset Master 10- unmute | grep '\[[0-9]\{1,2\}%\]' > /dev/null
+    ossmix vmix0-outvol -- -2
+elif [ "$1" = "toggle" ]
+then
+    #amixer sset PCM toggle | grep '\[[0-9]\{1,2\}%\]'
+    ossmix vmix0-outvol toggle
+fi
+

@@ -1,0 +1,7 @@
+RANGE=7
+
+number=$RANDOM
+let "number %= $RANGE"
+let "number += 1"
+
+feh  --bg-scale $(dirname $0)'/'$number'.png'

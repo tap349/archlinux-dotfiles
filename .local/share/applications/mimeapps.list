@@ -1,0 +1,10 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-WHVCKW.desktop
+message/rfc822=userapp-Thunderbird-WHVCKW.desktop
+application/x-extension-eml=userapp-Thunderbird-WHVCKW.desktop
+application/pdf=evince2.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-WHVCKW.desktop;
+message/rfc822=userapp-Thunderbird-WHVCKW.desktop;
+application/x-extension-eml=userapp-Thunderbird-WHVCKW.desktop;

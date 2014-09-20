@@ -1,0 +1,58 @@
+general 
+{
+        colors = true
+        interval = 3
+}
+
+#order += "disk /home/tap/torrent"
+#order += "disk /home/tap/music"
+#order += "disk /home/tap/movies"
+#order += "disk /home/tap/media"
+order += "load"
+order += "cpu_usage"
+#order += "volume master"
+order += "time"
+
+disk "/home/tap/torrent" 
+{
+	format = "torrent: %avail"
+}
+
+disk "/home/tap/music" 
+{
+	format = "music: %avail"
+}
+
+disk "/home/tap/movies" 
+{
+	format = "movies: %avail"
+}
+
+disk "/home/tap/media" 
+{
+	format = "media: %avail"
+}
+
+load 
+{
+	format = "load: %1min"
+}
+
+cpu_usage 
+{
+	format = "CPU: %usage"
+}
+
+volume master 
+{
+        format = "♪: %volume"
+        device = "default"
+        mixer = "vmix0-outvol"
+        mixer_idx = 0
+}
+
+time 
+{
+	format = "%Y-%m-%d %a %H:%M"
+}
+

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ `id -u` != 0 ]
+then
+	echo you are not root. exiting...
+	exit
+fi
+
+if [ "$1" = "pcm0" ]
+then
+#	vmixctl detach /dev/oss/oss_envy24ht0/spdout
+#	vmixctl attach /dev/oss/oss_envy24ht0/pcm0
+	ln -sf /dev/oss/oss_envy24ht0/pcm0 /dev/dsp
+	zenity --info --text="current dsp device is PCM0"
+elif [ "$1" = "spdout" ]
+then
+#	vmixctl detach /dev/oss/oss_envy24ht0/pcm0
+#	vmixctl attach /dev/oss/oss_envy24ht0/spdout
+	ln -sf /dev/oss/oss_envy24ht0/spdout /dev/dsp
+	zenity --info --text="current dsp device is SPDOUT"
+fi
+

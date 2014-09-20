@@ -1,0 +1,5 @@
+syntax: regexp
+
+# zero-width negative lookahead
+^(?!notes|thoughts|scripts)
+

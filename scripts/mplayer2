@@ -1,0 +1,18 @@
+#!/bin/bash
+
+TEMPDIR="/tmp"
+FILENAME=
+BASENAME=
+
+for file in "$@"
+do
+	echo "$file"
+	
+	FILENAME=`basename "$file"`
+	BASENAME="${FILENAME%.*}"
+
+	shnconv -o wav -d "$TEMPDIR" "$file"
+	mplayer "$TEMPDIR"/"$BASENAME".wav
+	rm "$TEMPDIR"/"$BASENAME".wav
+done
+

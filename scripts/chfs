@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# this script should be used for BTRFS LV only!
+# run under root.
+#
+# 1 - size (e.g. +10G) 
+# 2 - LV name (e.g. torrent)
+# 3 - mount point (e.g. /home/tap/torrent)
+
+SIZE=${1#[+|-]}
+SIGN=${1:0:1}
+VG=vg00
+LV=$2
+MOUNTPOINT=$3
+
+if [ `id -u` != 0 ]
+then
+	echo you are not root. exiting...
+	exit
+fi
+
+case $SIGN in
+	+) 
+		echo increasing $MOUNTPOINT size by $SIZE...
+		lvextend -L +$SIZE $VG/$LV
+		btrfs filesystem resize max $MOUNTPOINT
+	;;
+	-)
+		echo shrinking $MOUNTPOINT size by $SIZE...
+		btrfs filesystem resize -$SIZE $MOUNTPOINT
+		lvreduce -L -$SIZE $VG/$LV
+	;;
+	*)
+		echo ERROR: invalid size value supplied: $SIZE,
+		echo        this script is not intended to set absolute size.
+	;;
+esac
+

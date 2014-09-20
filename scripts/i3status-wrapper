@@ -1,0 +1,42 @@
+#!/bin/sh
+
+#----------------------------------------------------------------
+# METHOD 1
+#----------------------------------------------------------------
+
+#COMMAND=i3status-wrapper
+#RUNNING=`ps --no-headers -C${COMMAND} | wc -l`
+
+## 1 for script itself and 1 for ps command
+#[ $RUNNING -gt 2 ] && exit
+
+#----------------------------------------------------------------
+# METHOD 2
+#----------------------------------------------------------------
+
+#killall --older-than 5s i3status-wrapper
+
+#----------------------------------------------------------------
+# METHOD 3
+#----------------------------------------------------------------
+
+#LOCKFILE=/tmp/i3status-wrapper.lock
+#if [ -e ${LOCKFILE} ] && kill -0 `cat ${LOCKFILE}`
+#then
+#	exit
+#fi
+
+#trap "rm -f ${LOCKFILE}; exit" INT TERM EXIT
+#echo $$ > ${LOCKFILE}
+
+## while loop here...
+
+#rm -f ${LOCKFILE}
+
+i3status | while :
+do
+	read line
+	echo "$line [`skb 1 | tr '[:lower:]' '[:upper:]'`]" || exit 1
+done
+
+

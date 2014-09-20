@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIRECTORY="$HOME/pictures/screenshots/desktop/$(date +%y%m%d)"
+
+# create directory if it doesn't exist
+if [ ! -d {$DIRECTORY} ]
+then
+ mkdir $DIRECTORY
+fi
+
+# make screenshot and save to this directory
+scrot -d 0 -q 80 $DIRECTORY/shot-$(date +%y%m%d_%H%M%S).png > /dev/null
+

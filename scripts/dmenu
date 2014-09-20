@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/bin/dmenu -fn -*-fixed-medium-r-semicondensed-*-13-120-*-*-*-*-iso10646-* "$@"
+

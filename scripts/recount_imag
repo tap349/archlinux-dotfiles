@@ -1,0 +1,12 @@
+#!/bin/bash
+
+INDEX=$1
+
+for f in ./*.jpg
+do
+  echo "Processing $f file..."
+  printf -v COUNT '%04d' $INDEX
+  mv $f IMAG$COUNT.jpg
+  let "INDEX++"
+done
+

@@ -1,0 +1,3 @@
+#!/bin/bash                                                                                                                                                                           
+
+shntool conv -o flac "$1"

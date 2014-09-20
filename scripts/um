@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -n "$1" ]; then
+  sudo umount /dev/$1
+#  sleep 3
+#  sudo hdparm -y /dev/$1	
+else
+  echo "No device specified"
+fi
+

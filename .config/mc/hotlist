@@ -1,0 +1,5 @@
+ENTRY "/home/tap/torrent/downloads" URL "/home/tap/torrent/downloads"
+ENTRY "/home/tap/ftp://192.168.1.4:2121/Music" URL "/home/tap/ftp://192.168.1.4:2121/Music"
+ENTRY "/home/tap/music/lossless/GENRES" URL "/home/tap/music/lossless/GENRES"
+ENTRY "/home/tap/education/coursera/introduction to cryptography/week 1/lectures" URL "/home/tap/education/coursera/introduction to cryptography/week 1/lectures"
+ENTRY "/usr/share/fonts" URL "/usr/share/fonts"

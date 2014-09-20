@@ -1,0 +1,12 @@
+#!/bin/bash
+
+INDEX=$1
+
+for f in ./*.png
+do
+  echo "Processing $f file..."
+  printf -v COUNT '%04d' $INDEX
+  mv $f shot$COUNT.png
+  let "INDEX++"
+done
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+SESSION=$1
+COMMAND=$2
+
+#------------------------------------------------------
+# check if session parameter specified
+# otherwise use default session name
+#------------------------------------------------------
+
+if [ -z "$SESSION" ]
+then
+    SESSION=default
+fi
+
+tmux has-session -t $SESSION
+
+case "$?" in
+0)  echo "tmux session $SESSION is already running. attaching..."
+    urxvtc -e tmux attach-session -t $SESSION
+    ;;
+1)  echo "tmux $SESSION is not running. creating new session..."
+    urxvtc -e tmux new-session -s $SESSION $COMMAND
+    ;;
+*) echo "process this tmux has-session exit value"
+   ;;
+esac
+

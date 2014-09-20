@@ -1,0 +1,19 @@
+# arrow up searches back in history
+# words starting with entered characters
+"\e[A": history-search-backward
+
+# arrow down searches forward in history
+# words starting with entered characters
+"\e[B": history-search-forward
+
+$if Bash
+  # F10 toggles mc on and off
+  "\e[21~": "mc\C-M"
+
+  # do history expansion when space entered
+  Space: magic-space
+$endif
+
+# system wide inputrc ignored by default 
+# when using per user inputrc
+$include /etc/inputrc
